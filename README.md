@@ -1,6 +1,6 @@
 # Student Manager (Python)
-
-A simple command-line Student Management System built with Python.
+## Description
+Student Manager is a Python-based command-line application that allows users to manage student records. The application supports creating, viewing, searching, updating, and deleting student information while storing data permanently using a JSON file.
 
 ## Features
 - Add students
@@ -10,6 +10,8 @@ A simple command-line Student Management System built with Python.
 - Delete students
 - Count total students
 - Save data using JSON
+ Load existing student data automatically
+- Menu-driven command-line interface
 
 ## Technologies Used
 - Python
