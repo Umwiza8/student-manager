@@ -6,6 +6,7 @@ A simple command-line Student Management System built with Python.
 - Add students
 - View students
 - Search students
+- Update student information 
 - Delete students
 - Count total students
 - Save data using JSON
