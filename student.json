@@ -33,5 +33,10 @@
         "Name": "Kelly",
         "Country": "Jordan",
         "Age": 25
+    },
+    {
+        "Name": "Paul",
+        "Country": "Croatia",
+        "Age": 25
     }
 ]
