@@ -9,7 +9,7 @@ def load_students():
 
 def save_students():
     with open ("student.json","w") as file:
-        json.dump(students, file)
+        json.dump(students, file, indent=4)
 
 
 students=load_students()
@@ -18,9 +18,10 @@ while True:
     print("\n1. Add SStudent")
     print("2. View Student")
     print("3. Search student")
-    print("4. Delete Student")
-    print("5. Total of all Students")
-    print("6. Exit")
+    print("4.Update Student")
+    print("5. Delete Student")
+    print("6. Total of all Students")
+    print("7. Exit")
 
     choice=input("Please Choose:")
 
@@ -35,6 +36,7 @@ while True:
         }
         students.append(student)
         save_students()
+        print("Student added successfully!")
 
     elif choice=="2":
         for student in students:
@@ -53,8 +55,35 @@ while True:
                   f"Age: {student['Age']}")
         if not found:
             print("student not found")
-
+    
     elif choice=="4":
+        update_name=input("Enter name of the student to update: ")
+        found= False
+
+        for student in students:
+            if student["Name"]== update_name:
+                found=True
+                print("Student found.Leave blank if u don't want to change a field.")
+
+                new_name=input("New name: ")
+                new_country= input("New country: ")
+                new_age= input("New age: ")
+
+                if new_name:
+                    student["Name"]= new_name
+                if new_country:
+                    student["Country"]= new_country
+                if new_age:
+                    student["Age"]=int(new_age)
+
+                save_students()
+                print("Student updated successfully!")
+        if not found:
+            print("Student not found")
+            
+
+
+    elif choice=="5":
         delete_name=input("Please enter name of student you want to delete: ")
         found=False
         for student in students:
@@ -62,14 +91,15 @@ while True:
                 found=True
                 students.remove(student)
                 save_students()
+                print("Student deleted successfully!")
         if not found:
             print("Students not found")
 
-    elif choice=="5":
+    elif choice=="6":
         Total_students=len(students)
         print(f"The total of all students is: {Total_students}")
 
-    elif choice=="6":
+    elif choice=="7":
         break
 
 

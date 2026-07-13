@@ -1,3 +1,37 @@
-[{"Name": "Bebe", "Country": "Rwanda", "Age": 23},
-{"Name": "Weronica", "Country": "Poland", "Age": 28}, 
-{"Name": "John", "Country": "Kenya", "Age": 24}]
+[
+    {
+        "Name": "Bebe",
+        "Country": "Poland",
+        "Age": 23
+    },
+    {
+        "Name": "Weronica",
+        "Country": "Spain",
+        "Age": 29
+    },
+    {
+        "Name": "John",
+        "Country": "Kenya",
+        "Age": 24
+    },
+    {
+        "Name": "Bebe",
+        "Country": "Rwanda ",
+        "Age": 23
+    },
+    {
+        "Name": "John",
+        "Country": "Poland",
+        "Age": 24
+    },
+    {
+        "Name": "Lily",
+        "Country": "USA",
+        "Age": 29
+    },
+    {
+        "Name": "Kelly",
+        "Country": "Jordan",
+        "Age": 25
+    }
+]
