@@ -23,16 +23,20 @@ def display_menu():
 def add_student():
     name=input("Please enter your name: ")
     country=input("Please enter your country: ")
-    age=int(input("Please enter your age: "))
+    try:
+        age=int(input("Please enter your age: "))
+    except ValueError:
+        print("Put in a valid number") 
+        return   
     student={
-        "Name":name,
-        "Country":country,
-        "Age": age
-        }
+            "Name":name,
+            "Country":country,
+            "Age": age
+            }
     students.append(student)
     save_students()
-    print("Student added successfully!")
-            
+    print("Student added successfully!")    
+    
 def view_students():
      if not students:
          print("No students available")
@@ -64,13 +68,17 @@ def update_student():
             print("Student found.Leave blank if u don't want to change a field.")
             new_name=input("New name: ")
             new_country= input("New country: ")
-            new_age= input("New age: ")
+            new_age=input("New age: ")
             if new_name:
               student["Name"]= new_name
             if new_country:
               student["Country"]= new_country
             if new_age:
-              student["Age"]=int(new_age)
+                try:
+                    student["Age"]=int(new_age)
+                except ValueError:
+                    print("Enter a valid number")
+                    return
             save_students()
             print("Student updated successfully!")
     if not found:
@@ -96,30 +104,21 @@ students=load_students()
 while True:
     display_menu()
     choice=input("Please Choose:")
-
     if choice=="1":
         add_student()
-
     elif choice=="2":
-       view_students()
-    
+        view_students()
     elif choice=="3":
         search_student()
-    
     elif choice=="4":
-       update_student()
-
+        update_student()
     elif choice=="5":
         delete_student()
-
     elif choice=="6":
         total=get_total_students()
         print(total)
-
     elif choice=="7":
         break
-
-
-
-
-
+    else:
+        print("Invalid option. Please choose between 1 and 7.")
+    

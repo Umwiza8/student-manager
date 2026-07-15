@@ -16,6 +16,8 @@ Student Manager is a Python-based command-line application that allows users to 
 ## Technologies Used
 - Python
 - JSON file handling
+- Git 
+- GitHub 
 
 ## How to run
 ```bash
